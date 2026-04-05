@@ -1,0 +1,210 @@
+/m/'
+[ec2-user@ip-172-31-33-35 ~]$ sudo -i
+[root@ip-172-31-33-35 ~]# hostnamectl set-hostname user1
+[root@ip-172-31-33-35 ~]# sudo -i
+[root@user1 ~]# yum -y install httpd
+Amazon Linux 2023 Kernel Livepatc 269 kB/s |  31 kB     00
+Last metadata expiration check: 0:00:01 ago on Sun Apr  5  2026.
+Dependencies resolved.
+==========================================================
+ Package          Arch   Version                Repository
+==========================================================
+Installing:
+ httpd            x86_64 2.4.66-1.amzn2023.0.1  amazonlinu
+Installing dependencies:
+ apr              x86_64 1.7.5-1.amzn2023.0.4   amazonlinu
+ apr-util         x86_64 1.6.3-1.amzn2023.0.2   amazonlinu
+ apr-util-lmdb    x86_64 1.6.3-1.amzn2023.0.2   amazonlinu
+ generic-logos-httpd
+                  noarch 18.0.0-12.amzn2023.0.3 amazonlinu
+ httpd-core       x86_64 2.4.66-1.amzn2023.0.1  amazonlinu
+ httpd-filesystem noarch 2.4.66-1.amzn2023.0.1  amazonlinu
+ httpd-tools      x86_64 2.4.66-1.amzn2023.0.1  amazonlinu
+ libbrotli        x86_64 1.0.9-4.amzn2023.0.2   amazonlinu
+ mailcap          noarch 2.1.49-3.amzn2023.0.3  amazonlinu
+Installing weak dependencies:
+ apr-util-openssl x86_64 1.6.3-1.amzn2023.0.2   amazonlinu
+ mod_http2        x86_64 2.0.27-1.amzn2023.0.3  amazonlinu
+ mod_lua          x86_64 2.4.66-1.amzn2023.0.1  amazonlinu
+
+Transaction Summary
+==========================================================
+Install  13 Packages
+
+Total download size: 2.4 M
+Installed size: 6.9 M
+Downloading Packages:
+(1/13): apr-util-lmdb-1.6.3-1.amz 359 kB/s |  13 kB     00
+(2/13): apr-util-1.6.3-1.amzn2023 2.3 MB/s |  97 kB     00
+(3/13): apr-1.7.5-1.amzn2023.0.4. 2.7 MB/s | 129 kB     00
+(4/13): apr-util-openssl-1.6.3-1. 609 kB/s |  15 kB     00
+(5/13): generic-logos-httpd-18.0. 650 kB/s |  19 kB     00
+(6/13): httpd-2.4.66-1.amzn2023.0 1.6 MB/s |  47 kB     00
+(7/13): httpd-core-2.4.66-1.amzn2  40 MB/s | 1.4 MB     00
+(8/13): httpd-filesystem-2.4.66-1 435 kB/s |  13 kB     00
+(9/13): httpd-tools-2.4.66-1.amzn 2.6 MB/s |  81 kB     00
+(10/13): libbrotli-1.0.9-4.amzn20  10 MB/s | 315 kB     00
+(11/13): mailcap-2.1.49-3.amzn202 1.1 MB/s |  33 kB     00
+(12/13): mod_http2-2.0.27-1.amzn2 5.3 MB/s | 166 kB     00
+(13/13): mod_lua-2.4.66-1.amzn202 2.2 MB/s |  60 kB     00
+----------------------------------------------------------
+Total                              12 MB/s | 2.4 MB     00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :
+  Installing       : apr-1.7.5-1.amzn2023.0.4.x86_64
+  Installing       : apr-util-lmdb-1.6.3-1.amzn2023.0.2.x
+  Installing       : apr-util-openssl-1.6.3-1.amzn2023.0.
+  Installing       : apr-util-1.6.3-1.amzn2023.0.2.x86_64
+  Installing       : mailcap-2.1.49-3.amzn2023.0.3.noarch
+  Installing       : httpd-tools-2.4.66-1.amzn2023.0.1.x8
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_6
+  Running scriptlet: httpd-filesystem-2.4.66-1.amzn2023.0
+  Installing       : httpd-filesystem-2.4.66-1.amzn2023.0
+  Installing       : httpd-core-2.4.66-1.amzn2023.0.1.x86
+  Installing       : mod_http2-2.0.27-1.amzn2023.0.3.x86_
+  Installing       : mod_lua-2.4.66-1.amzn2023.0.1.x86_64
+  Installing       : generic-logos-httpd-18.0.0-12.amzn20
+  Installing       : httpd-2.4.66-1.amzn2023.0.1.x86_64
+  Running scriptlet: httpd-2.4.66-1.amzn2023.0.1.x86_64
+  Verifying        : apr-1.7.5-1.amzn2023.0.4.x86_64
+  Verifying        : apr-util-1.6.3-1.amzn2023.0.2.x86_64
+  Verifying        : apr-util-lmdb-1.6.3-1.amzn2023.0.2.x
+  Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.
+  Verifying        : generic-logos-httpd-18.0.0-12.amzn20
+  Verifying        : httpd-2.4.66-1.amzn2023.0.1.x86_64
+  Verifying        : httpd-core-2.4.66-1.amzn2023.0.1.x86
+  Verifying        : httpd-filesystem-2.4.66-1.amzn2023.0
+  Verifying        : httpd-tools-2.4.66-1.amzn2023.0.1.x8
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_6
+  Verifying        : mailcap-2.1.49-3.amzn2023.0.3.noarch
+  Verifying        : mod_http2-2.0.27-1.amzn2023.0.3.x86_
+  Verifying        : mod_lua-2.4.66-1.amzn2023.0.1.x86_64
+
+Installed:
+  apr-1.7.5-1.amzn2023.0.4.x86_64
+  apr-util-1.6.3-1.amzn2023.0.2.x86_64
+  apr-util-lmdb-1.6.3-1.amzn2023.0.2.x86_64
+  apr-util-openssl-1.6.3-1.amzn2023.0.2.x86_64
+  generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch
+  httpd-2.4.66-1.amzn2023.0.1.x86_64
+  httpd-core-2.4.66-1.amzn2023.0.1.x86_64
+  httpd-filesystem-2.4.66-1.amzn2023.0.1.noarch
+  httpd-tools-2.4.66-1.amzn2023.0.1.x86_64
+  libbrotli-1.0.9-4.amzn2023.0.2.x86_64
+  mailcap-2.1.49-3.amzn2023.0.3.noarch
+  mod_http2-2.0.27-1.amzn2023.0.3.x86_64
+  mod_lua-2.4.66-1.amzn2023.0.1.x86_64
+
+Complete!
+[root@user1 ~]# systemctl start httpd
+[root@user1 ~]# systemctl enable httpd
+Created symlink /etc/systemd/system/multi-user.target.wantservice → /usr/lib/systemd/system/httpd.service.
+[root@user1 ~]# systemctl status httpd
+● httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service
+     Active: active (running) since Sun 2026-04-05 03:29:1
+       Docs: man:httpd.service(8)
+   Main PID: 25542 (httpd)
+     Status: "Total requests: 0; Idle/Busy workers 100/0;R
+      Tasks: 177 (limit: 1014)
+     Memory: 13.5M
+        CPU: 124ms
+     CGroup: /system.slice/httpd.service
+             ├─25542 /usr/sbin/httpd -DFOREGROUND
+             ├─25569 /usr/sbin/httpd -DFOREGROUND
+             ├─25571 /usr/sbin/httpd -DFOREGROUND
+             ├─25572 /usr/sbin/httpd -DFOREGROUND
+             └─25580 /usr/sbin/httpd -DFOREGROUND
+
+Apr 05 03:29:17 user1 systemd[1]: Starting httpd.service -
+Apr 05 03:29:17 user1 httpd[25542]: AH00558: httpd: Could
+Apr 05 03:29:17 user1 systemd[1]: Started httpd.service -
+Apr 05 03:29:17 user1 httpd[25542]: Server configured, lis
+
+[root@user1 ~]# vim index.html
+[root@user1 ~]# systemctl restart httpd
+[root@user1 ~]# rm -f index.html
+[root@user1 ~]# ll
+total 0
+[root@user1 ~]# vim index.html
+[root@user1 ~]# systemctl restart httpd
+[root@user1 ~]# rm -f index.html
+[root@user1 ~]# vim index.html
+[root@user1 ~]# systemctl restart httpd
+[root@user1 ~]# cd /var/www/html/
+[root@user1 html]# vim index.html
+[root@user1 html]# systemctl restart httpd
+[root@user1 html]# cd /var/www/html
+ls
+index.html
+[root@user1 html]#
+[root@user1 html]# vim index.html
+[root@user1 html]# systemctl restart httpd
+[root@user1 html]# rm -f index.html
+[root@user1 html]# vim index.html
+[root@user1 html]# systemctl restart httpd
+[root@user1 html]# rm -f index.html
+[root@user1 html]# vim index.html
+[root@user1 html]# systemctl restart httpd
+[root@user1 html]# Read from remote host ec2-13-206-85-30.ap-south-1.compute.amazonaws.com: Connection reset by peer
+Connection to ec2-13-206-85-30.ap-south-1.compute.amazonaws.com closed.
+client_loop: send disconnect: Connection reset by peer
+                                                         ✗
+
+  /home/mobaxterm/Desktop/Keypair 
+  2026-04-05   10:24.00  ssh -i "haseeb.pem" ec2-user@65.0.132.235
+ssh: connect to host 65.0.132.235 port 22: Connection timed out
+                                                         ✗
+
+  /home/mobaxterm/Desktop/Keypair 
+  2026-04-05   10:24.39  ssh -i "haseeb.pem" ec2-user@ec2-13-233-161-46.ap-south-1.compute.amazonaws.com
+Warning: Permanently added 'ec2-13-233-161-46.ap-south-1.compute.amazonaws.com' (ED25519) to the list of known hosts.
+X11 forwarding request failed on channel 0
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sun Apr  5 03:26:29 2026 from 111.68.102.25
+[ec2-user@user1 ~]$
+[ec2-user@user1 ~]$ sudo -i
+[root@user1 ~]# history
+    1  hostnamectl set-hostname user1
+    2  sudo -i
+    3  yum -y install httpd
+    4  systemctl start httpd
+    5  systemctl enable httpd
+    6  systemctl status httpd
+    7  vim index.html
+    8  systemctl restart httpd
+    9  rm -f index.html
+   10  ll
+   11  vim index.html
+   12  systemctl restart httpd
+   13  rm -f index.html
+   14  vim index.html
+   15  systemctl restart httpd
+   16  cd /var/www/html/
+   17  vim index.html
+   18  systemctl restart httpd
+   19  cd /var/www/html
+   20  ls
+   21  vim index.html
+   22  systemctl restart httpd
+   23  rm -f index.html
+   24  vim index.html
+   25  systemctl restart httpd
+   26  rm -f index.html
+   27  vim index.html
+   28  systemctl restart httpd
+   29  history
+[root@user1 ~]#
